@@ -32,8 +32,9 @@
 			      console.log(json);
 			      
 			      // Display Data Dynamically
-			      $("#current_temp").html((json.currently.temperature)+"&#176;F");
+			      $("#current_temp").html(Math.round(json.currently.temperature)+"&#176;F");
 			      $("#current_summary").html(json.currently.summary);
+			      $("#ozone").html(json.currently.ozone);
 
 			    },
 			    error: function(e) {
@@ -78,6 +79,7 @@
 		<h1 id="current_temp" class="icon" data-icon="B">65&#176;F</h1>
 		<p id="current_summary">Partly Cloudy</p>
 		<p id="location">Current Location</p> 
+		<p id="ozone">ozone</p>
 	</div>
 </div>
  
